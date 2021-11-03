@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 console.log("------------->",process.env.MDB);
 app.get('/', (req, res) => {
-    res.send("Pakistan Zindabad");
+    res.send("Pakistan Zindabad ", process.env.MDB);
 })
 
 app.listen(port, () => {
