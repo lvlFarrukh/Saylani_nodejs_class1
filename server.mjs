@@ -3,9 +3,9 @@ import express from 'express'
 const port = process.env.PORT || 3000;
 
 const app = express();
-console.log("------------->",process.env.MDB);
+const pass = process.env.MDB | 123
 app.get('/', (req, res) => {
-    res.send("Pakistan Zindabad ", process.env.MDB);
+    res.send("Pakistan Zindabad ", pass);
 })
 
 app.listen(port, () => {
