@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
     res.send("Pakistan Zindabad");
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Server run on localhost:${port}`)
 })
