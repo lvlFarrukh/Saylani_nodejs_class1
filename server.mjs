@@ -1,13 +1,15 @@
 import express from 'express'
+import morgan from 'morgan'
 
 const port = process.env.PORT || 3000;
 
 const app = express();
-const pass = process.env.MDB || 123
+
+app.use(morgan('short'))
 app.get('/', (req, res) => {
-    res.send("Pakistan Zindabad ", pass);
+    res.send("Pakistan Zindabad");
 })
 
-app.listen(port, () => {
+app.listen(3000, () => {
     console.log(`Server run on localhost:${port}`)
 })
